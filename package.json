@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/kyragaut/KeyGenerator/issues"
   },
-  "homepage": "https://github.com/kyragaut/KeyGenerator#readme"
+  "homepage": "https://github.com/kyragaut/KeyGenerator#readme",
+  "dependencies": {
+    "bs58check": "^2.1.2",
+    "secp256k1": "^4.0.0",
+    "tape": "^4.13.0"
+  }
 }
