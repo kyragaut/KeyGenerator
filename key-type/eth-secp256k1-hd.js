@@ -48,3 +48,5 @@ function createChildKey ()
 {
 	
 }
+
+module.exports = privateKey, publicKey, sign, veryify, createChildKey

@@ -2,9 +2,9 @@
   "name": "keygenerator",
   "version": "1.0.0",
   "description": "Part of a key manager that generates hierarchical deterministic keys (HDKey) from a secret.",
-  "main": "index.js",
+  "main": "key-type/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node key-type/eth-secp256k1-hd-tests.js" 
   },
   "repository": {
     "type": "git",
