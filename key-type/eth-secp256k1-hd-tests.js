@@ -1,7 +1,8 @@
-const ethsecp = require('eth-secp256k1-hd')
+
 const test = require('tape');
+import * as eth from 'eth-secp256k1-hd'
 
 test('exec test', function(t) {
     t.equal(1, 1);
-    ethsecp.createChildKey();
+    eth.createChildKey();
 });

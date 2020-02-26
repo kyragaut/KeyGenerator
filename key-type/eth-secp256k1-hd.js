@@ -17,7 +17,7 @@ const crypto = require ('crypto') //npm module that generates randomness from en
 const assert = require('assert') //will remove this later and replace it to do our verifications in a cleaner way because assert won't throw an error it just will make things not work
 
 //function that generates a private key from 
-function privateKey ()
+export function privateKey ()
 {
 	//bytes is basically the private key
 	const bytes = crypto.randomBytes(32) //32 is the length of key size in secp256k1
@@ -27,26 +27,24 @@ function privateKey ()
 }
 
 
-function publicKey (privateKey)
+export function publicKey (privateKey)
 {
 	return secp256k1.publicKeyCreate(privateKey, true) //generate public key by passing the private key through, and using the elliptic curve secp256k1
 	//decided not to put the hash in bbecause it's used more in bitcoin and not sure if it's needed in this library
 }
 
-function sign (hash, privateKey)
+export function sign (hash, privateKey)
 {
 	return secp256k1.sign(hash, privateKey).signature
 }
 
-function verify (hash, signature, publicKey) //hash is the message. Public key decripts my signature, which proves it was signed by my private key
+export function verify (hash, signature, publicKey) //hash is the message. Public key decripts my signature, which proves it was signed by my private key
 {
 	return secp256k1.verify(hash, signature, publicKey)
 }
 
 
-function createChildKey ()
+export function createChildKey ()
 {
 	
 }
-
-module.exports = privateKey, publicKey, sign, veryify, createChildKey
