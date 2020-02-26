@@ -4,7 +4,7 @@
   "description": "Part of a key manager that generates hierarchical deterministic keys (HDKey) from a secret.",
   "main": "key-type/index.js",
   "scripts": {
-    "test": "node key-type/eth-secp256k1-hd-tests.js" 
+    "test": "tape key-type/eth-secp256k1-hd-tests.js" 
   },
   "repository": {
     "type": "git",
